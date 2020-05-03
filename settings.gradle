@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'spring-webservice'
+rootProject.name = 'springboot-webservice'
+rootProject.name = 'springboot-webservice'
+

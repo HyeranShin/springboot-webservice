@@ -35,5 +35,7 @@ dependencies {
     //-> 각 라이브러리들의 버전 관리가 한 곳에 집중 -> 버전 충돌 문제 해결
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.projectlombok:lombok')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa') //스프링 부트용 Spring Data Jpa 추상화 라이브러리
+    compile('com.h2database:h2') //인메모리 관계형 데이터베이스 -> 재시작할때마다 초기화. 테스트 용도
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

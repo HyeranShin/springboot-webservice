@@ -1,0 +1,6 @@
+spring:
+  jpa:
+    show-sql: true #콘솔에서 쿼리 로그 확인
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect

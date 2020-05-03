@@ -34,5 +34,6 @@ dependencies {
     //버전을 명시하지 않아야만 맨 위의 'org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}'의 버전을 따라감
     //-> 각 라이브러리들의 버전 관리가 한 곳에 집중 -> 버전 충돌 문제 해결
     compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.projectlombok:lombok')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

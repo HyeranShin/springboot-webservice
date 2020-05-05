@@ -1,5 +1,6 @@
 package com.study.springboot.web;
 
+import com.study.springboot.config.auth.LoginUser;
 import com.study.springboot.config.auth.dto.SessionUser;
 import com.study.springboot.domain.user.User;
 import com.study.springboot.service.PostsService;
@@ -17,12 +18,13 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
 
     private final PostsService postsService;
-    private final HttpSession httpSession;
+//    private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) { //Moel: 서버 템플릿 엔진에서 사용할 수 있는 객체 저장
+    public String index(Model model, @LoginUser SessionUser user) { //Moel: 서버 템플릿 엔진에서 사용할 수 있는 객체 저장
         model.addAttribute("posts", postsService.findAllDesc());
-        SessionUser user = (SessionUser) httpSession.getAttribute("user"); //CustomOAuth2UserService에서 로그인 성공시 세션에 SessionUser 저장 -> 로그인 성공시 값을 가져올 수 있음
+        //SessionUser user = (SessionUser) httpSession.getAttribute("user"); //CustomOAuth2UserService에서 로그인 성공시 세션에 SessionUser 저장 -> 로그인 성공시 값을 가져올 수 있음
+        //-> 어노테이션 기반으로 리팩토링
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }

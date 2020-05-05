@@ -17,7 +17,7 @@ script: "./gradlew clean build" #master 브랜치에 푸시되었을때 수행�
 before_deploy: #deploy 명령어가 실행되기 전 수행
   - zip -r springboot-webservice * #CodeeDeploy는 Jar 파일 인식 X -> Jar+기타 설정 파일들 모두 모아 압축
   - mkdir -p deploy
-  - mv springboot-webservice.zip deploy/springboot-websertice.zip
+  - mv springboot-webservice.zip deploy/springboot-webservice.zip
 
 deploy: #외부 서비스와 연동될 행위들 선언
   - provider: s3

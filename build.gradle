@@ -19,7 +19,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management' //스프링 부트의 의존성들을 관리하는 플러그인
 
 group 'study'
-version '1.0.1-SNAPSHOT'
+version '1.0.1-SNAPSHOT-'+new Date().format("yyyyMMddHHmmss")
 
 sourceCompatibility = 1.8
 
